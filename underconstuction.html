@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description"
+    content="Store To Move — Premium self-storage solutions in South Africa. Our new website is coming soon." />
+  <title>Store To Move | Under Construction</title>
+  <meta name="theme-color" content="#1A1A1A" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --clr-charcoal: #1A1A1A;
+      --clr-charcoal-2: #222222;
+      --clr-charcoal-3: #2C2C2C;
+      --clr-orange: #FF6200;
+      --clr-orange-lt: #FF7B1F;
+      --clr-orange-dk: #E05500;
+      --clr-white: #FFFFFF;
+      --clr-text: #E0E0E0;
+      --clr-muted: #9A9A9A;
+      --line: rgba(255, 255, 255, 0.10);
+      --line-strong: rgba(255, 255, 255, 0.22);
+      --line-faint: rgba(255, 255, 255, 0.04);
+      --font-heading: 'Outfit', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --radius-md: 12px;
+      --radius-xl: 32px;
+      --transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 20px;
+      background-color: var(--clr-charcoal);
+      background-image:
+        radial-gradient(ellipse 60% 55% at 15% 100%, rgba(255, 98, 0, 0.16), transparent 70%),
+        linear-gradient(var(--line-faint) 1px, transparent 1px),
+        linear-gradient(90deg, var(--line-faint) 1px, transparent 1px);
+      background-size: auto, 56px 56px, 56px 56px;
+      color: var(--clr-text);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .card {
+      position: relative;
+      max-width: 600px;
+      width: 100%;
+      background: var(--clr-charcoal-2);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      padding: 52px 40px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--clr-orange-lt), var(--clr-orange), var(--clr-orange-dk));
+    }
+
+    .logo {
+      height: 58px;
+      width: auto;
+      margin: 0 auto 30px;
+      display: block;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 16px;
+      border-radius: 999px;
+      background: rgba(255, 98, 0, 0.10);
+      border: 1px solid rgba(255, 98, 0, 0.35);
+      color: var(--clr-orange-lt);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .badge::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--clr-orange);
+      animation: pulse 2s infinite;
+      flex-shrink: 0;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 0.4;
+        transform: scale(1.4);
+      }
+    }
+
+    h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.9rem, 4.5vw, 2.65rem);
+      font-weight: 900;
+      color: var(--clr-white);
+      line-height: 1.12;
+      letter-spacing: -0.015em;
+      margin-bottom: 16px;
+    }
+
+    h1 .highlight {
+      background: linear-gradient(120deg, var(--clr-orange-lt), var(--clr-orange), var(--clr-orange-dk));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .lead {
+      color: var(--clr-muted);
+      font-size: 1rem;
+      line-height: 1.75;
+      max-width: 48ch;
+      margin: 0 auto 34px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.92rem;
+      padding: 13px 24px;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--clr-orange-lt) 0%, var(--clr-orange) 60%, var(--clr-orange-dk) 100%);
+      color: var(--clr-white);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.08);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--clr-white);
+      border: 1.5px solid var(--line-strong);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--clr-orange);
+      color: var(--clr-orange-lt);
+      background: rgba(255, 98, 0, 0.06);
+      transform: translateY(-2px);
+    }
+
+    .footer-note {
+      margin-top: 24px;
+      font-size: 0.78rem;
+      color: var(--clr-muted);
+      opacity: 0.75;
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 38px 24px;
+        border-radius: 22px;
+      }
+
+      .actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+    <img src="STM_TextLogo.svg" alt="Store To Move" class="logo" />
+    <span class="badge">Page Under Construction</span>
+    <h1>Your Space, Your <span class="highlight">Freedom</span></h1>
+    <p class="lead">
+      We’re putting the finishing touches on the new Store To Move website. Need secure, flexible self-storage or a quote in the meantime? Get in touch with our team directly.
+    </p>
+    <div class="actions">
+      <a href="tel:+27711030540" class="btn btn-primary">Call 071 103 0540</a>
+      <a href="mailto:info@storetomove.co.za" class="btn btn-outline">info@storetomove.co.za</a>
+    </div>
+  </main>
+  <p class="footer-note">&copy; <span id="year"></span> Store To Move. All rights reserved.</p>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
